@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Cliente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+    <h1 class="text-center">Cadastro - Cliente</h1>
+
+    <form method="POST" action="/adicionar">
+        <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control col-6" name="nome" id="nome" th:value="${contato.nome}" />
+        </div>
+        <div class="form-group">
+        <label for="endereco">Endereço:</label>
+        <input type="text" class="form-control col-6" name="endereco" id="endereco" th:value="${contato.endereco}" />
+        </div>
+        <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="text" class="form-control col-6" name="telefone" id="telefone" th:value="${contato.telefone}" />
+        </div>
+        <input type="hidden" name="id" id="id" th:value="${contato.id}" />
+        <input class="btn btn-primary" type="submit" value="Salvar"/>
+    </form>
+
+    <a href="/" type="button" class="btn btn-light">Voltar</a>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
